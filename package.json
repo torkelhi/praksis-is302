@@ -1,0 +1,7 @@
+{
+  "name": "praksis-is302",
+  "version": "1.0.0",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0"
+  }
+}

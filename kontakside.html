@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kontakt Oss</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    const PUBLIC_KEY = "j3uXgMkKF9LsBZ9uz";
+    (function() {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init(PUBLIC_KEY);
+    })();
+  </script>
+  <script type="text/javascript">
+    const SERVICE_ID = "service_w3gau7c";
+    const TEMPLATE_ID = "template_s4ygcrd";
+
+ function send() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, document.getElementById('contact-form'), PUBLIC_KEY)
+                .then(function() {
+                  console.log('SUCCESS!');
+                }, function(error) {
+                  console.log('FAILED...', error);
+                });
+      });
+    }
+  </script>
+</head>
+<body>
+<form id="contact-form" method="post">
+  <label>Name</label>
+  <input type="text" name="navn">
+  <label>Email</label>
+  <input type="email" name="email">
+  <label>Message</label>
+  <textarea name="msg" cols="50" rows="10"></textarea>
+  <input type="submit" value="Send" onclick="send()">
+</form>
+</body>
+</html>
