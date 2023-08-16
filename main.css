@@ -105,4 +105,31 @@ footer {
 }
 
 
+/* kontakt.html */
+
+#contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-left: 1rem;
+    font-size: 26px;
+    font-family: Arial,sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    color: #333;
+}
+
+#contact-form input{
+  height: 2rem;
+    font-size: 26px;
+    font-family: Arial,sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+
+}
+
+
 
