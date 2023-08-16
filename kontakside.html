@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Kontakt Oss</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -20,9 +21,10 @@
 
                 emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, document.getElementById('contact-form'), PUBLIC_KEY)
                     .then(function () {
-                        console.log('SUCCESS!');
+                        alert("Melding er sendt.")
                     }, function (error) {
-                        console.log('FAILED...', error);
+                        console.log(error)
+                        alert("Det skjedde en feil, prøv igjen seinere.")
                     });
             });
         }
@@ -36,33 +38,34 @@
 </div>
 <header>
     <nav id="navbar">
-        <a href="#prosjektBeskrivelse" alt="prosjekt beskrivelse"> Prosjekt Beskrivelse</a>
-        <a href="#omOss" alt="beskrivelse av oss selv"> Om oss</a>
-        <a href="#knowit" alt="beskrivelse av samarbeidspartnere"> Om samarbeidspartnere</a>
-        <a href="#status" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
-        <a href="#refleksjon" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
+        <a href="index.html#prosjektBeskrivelse" alt="prosjekt beskrivelse"> Prosjekt Beskrivelse</a>
+        <a href="index.html#omOss" alt="beskrivelse av oss selv"> Om oss</a>
+        <a href="index.html#knowit" alt="beskrivelse av samarbeidspartnere"> Om samarbeidspartnere</a>
+        <a href="index.html#status" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
+        <a href="index.html#refleksjon" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
         <a href="./kontakside.html" alt="prosjekt beskrivelse"> Kontakt oss</a>
     </nav>
 </header>
 <body>
 <main>
     <form id="contact-form" method="post">
-        <label>Name</label>
+        <label>Navn</label>
         <input type="text" name="navn">
         <label>Email</label>
         <input type="email" name="email">
-        <label>Message</label>
+        <label>Melding</label>
         <textarea name="msg" cols="50" rows="10"></textarea>
-        <input type="submit" value="Send" onclick="send()">
+        <input type="submit" value="Send Melding" onclick="send()">
     </form>
 </main>
 </body>
 <footer>
     <div id="footer">
         <p>Laget av: Torkel Herskedal Ivarsøy og Asbjørn Håland Hestnes</p>
-        <a href="#navbar" alt=""> <img
-                src="./bilder/png-transparent-computer-icons-encapsulated-postscript-back-icon-angle-text-круглые-кнопки-thumbnail.png"
-                class="icons" alt="tilbake til navigasjonsbaren"> </a>
+        <a href="#navbar" alt="">
+            <img src="bilder/tilbakeIcon.png"
+                class="icons" alt="tilbake til navigasjonsbaren">
+        </a>
     </div>
 </footer>
 </html>

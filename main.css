@@ -30,6 +30,20 @@ p {
 a {
     text-decoration: none;
 }
+#knowit a {
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 26px;
+    font-family: Arial,sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    color: #333;
+    cursor: pointer}
+
+#knowit a:hover  {
+    color: deeppink;
+     }
+
 
 
 nav {
@@ -123,12 +137,20 @@ footer {
 }
 
 #contact-form input{
-  height: 2rem;
+  height: 2.5rem;
     font-size: 26px;
     font-family: Arial,sans-serif;
     font-style: normal;
     line-height: 1.5;
+    padding-left: 1rem;
+}
 
+#contact-form textarea{
+    font-size: 26px;
+    font-family: Arial,sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    padding-left: 1rem;
 }
 
 
