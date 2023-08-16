@@ -2,17 +2,18 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./main.css">
     <title>knowit</title>
 </head>
 <div class="logo">
     <img src="https://www.knowit.no/Static/img/icons/logotype-black.svg" alt="logo"/>
 </div>
 <header>
-    <nav>
+    <nav id="navbar">
         <a href="#prosjektBeskrivelse" alt="prosjekt beskrivelse"> Prosjekt Beskrivelse</a>
         <a href="#omOss" alt="beskrivelse av oss selv"> Om oss</a>
         <a href="#knowit" alt="beskrivelse av samarbeidspartnere"> Om samarbeidspartnere</a>
-        <a href="#status" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
+        <a href="#status" alt="prosjekt beskrivelse"> Status</a>
         <a href="#refleksjon" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
         <a href="./kontakside.html" alt="prosjekt beskrivelse"> Kontakt oss</a>
     </nav>
@@ -21,17 +22,17 @@
 <main>
     <article id="prosjektBeskrivelse">
         <section>
-            <h3>
+            <h2>
                 Prosjekt beskrivelse
-            </h3>
+            </h2>
             <p>
                 Skrive om prosjekt beskrivelse her
             </p>
         </section>
         <section>
-            <h3>
+            <h2>
                 Oppgave beskrivelse
-            </h3>
+            </h2>
             <p>
                 Skrive om oppgave beskrivelse her
             </p>
@@ -39,28 +40,32 @@
     </article>
 
     <article id="omOss" alt="beskrivelse av oss">
+        <h2>Om oss</h2>
+        <div id="omOss-container">
         <section id="torkel" class="visittkort">
             <h3>Torkel Herskedal Ivarsøy</h3>
-            <div class="links">
-                <a href="https://github.com/torkelhi" alt="GitHub konto Torkel" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/in/torkel-ivars%C3%B8y-499505232/" alt="LinkedIn Torkel"
-                   target="_blank">LinkedIn</a>
-            </div>
           <p>
             Her skriver jeg om meg selv
           </p>
+            <div class="links">
+
+                <a href="https://github.com/torkelhi" alt="GitHub konto Torkel" target="_blank"><img src="./bilder/github-mark/github-mark.png" class="icons" alt="Github logo"></a>
+                <a href="https://www.linkedin.com/in/torkel-ivars%C3%B8y-499505232/" alt="LinkedIn Torkel"
+                   target="_blank"><img src="./bilder/LinkedIn-Logos/LI-In-Bug.png" class="icons" alt="LinkedIn logo" /> </a>
+            </div>
         </section>
 
       <section id="asbjørn" class="visittkort">
         <h3>Asbjørn Håland Hestnes</h3>
-        <div class="links">
-          <a href="#" alt="GitHub konto Asbjørn" target="_blank">Github</a>
-          <a href="#" alt="LinkedIn Asbjørn" target="_blank">LinkedIn</a>
-        </div>
         <p>
           Her skriver jeg om meg selv
         </p>
+        <div class="links">
+          <a href="#" alt="GitHub konto Asbjørn" target="_blank"><img src="./bilder/github-mark/github-mark.png" class="icons" alt="Github logo"></a>
+          <a href="#" alt="LinkedIn Asbjørn" target="_blank"><img src="./bilder/LinkedIn-Logos/LI-In-Bug.png" class="icons" alt="LinkedIn logo" /> </a>
+        </div>
       </section>
+        </div>
     </article>
 
   <article id="knowit">
@@ -76,12 +81,12 @@
 
   <article id="status">
     <section id="status01">
-      <h3>Status</h3>
+      <h2>Status</h2>
       <p> skriver om status 01 her</p>
     </section>
 
     <section id="status02">
-      <h3>Status</h3>
+      <h2>Status</h2>
       <p>
         skriver om status 02 her
       </p>
@@ -89,12 +94,15 @@
   </article>
 
   <article id="refleksjon">
-    <h3>Avsluttende refleksjon</h3>
+    <h2>Avsluttende refleksjon</h2>
     <p>Skriver om avsluttende refleksjon her</p>
   </article>
 </main>
 </body>
 <footer>
+    <div id="footer">
     <p>Laget av: Torkel Herskedal Ivarsøy og Asbjørn Håland Hestnes</p>
+    <a href="#navbar" alt=""> <img src="./bilder/png-transparent-computer-icons-encapsulated-postscript-back-icon-angle-text-круглые-кнопки-thumbnail.png" class="icons" alt="tilbake til navigasjonsbaren" > </a>
+    </div>
 </footer>
 </html>

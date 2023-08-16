@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kontakt Oss</title>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    const PUBLIC_KEY = "j3uXgMkKF9LsBZ9uz";
-    (function() {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init(PUBLIC_KEY);
-    })();
-  </script>
-  <script type="text/javascript">
-    const SERVICE_ID = "service_w3gau7c";
-    const TEMPLATE_ID = "template_s4ygcrd";
+    <title>Kontakt Oss</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        const PUBLIC_KEY = "j3uXgMkKF9LsBZ9uz";
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init(PUBLIC_KEY);
+        })();
+    </script>
+    <script type="text/javascript">
+        const SERVICE_ID = "service_w3gau7c";
+        const TEMPLATE_ID = "template_s4ygcrd";
 
- function send() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+        function send() {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, document.getElementById('contact-form'), PUBLIC_KEY)
-                .then(function() {
-                  console.log('SUCCESS!');
-                }, function(error) {
-                  console.log('FAILED...', error);
-                });
-      });
-    }
-  </script>
+                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, document.getElementById('contact-form'), PUBLIC_KEY)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" href="./main.css">
 </head>
+
+<div class="logo">
+    <img src="https://www.knowit.no/Static/img/icons/logotype-black.svg" alt="logo"/>
+</div>
+<header>
+    <nav id="navbar">
+        <a href="#prosjektBeskrivelse" alt="prosjekt beskrivelse"> Prosjekt Beskrivelse</a>
+        <a href="#omOss" alt="beskrivelse av oss selv"> Om oss</a>
+        <a href="#knowit" alt="beskrivelse av samarbeidspartnere"> Om samarbeidspartnere</a>
+        <a href="#status" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
+        <a href="#refleksjon" alt="prosjekt beskrivelse"> Avsluttende refleksjon</a>
+        <a href="./kontakside.html" alt="prosjekt beskrivelse"> Kontakt oss</a>
+    </nav>
+</header>
 <body>
 <form id="contact-form" method="post">
-  <label>Name</label>
-  <input type="text" name="navn">
-  <label>Email</label>
-  <input type="email" name="email">
-  <label>Message</label>
-  <textarea name="msg" cols="50" rows="10"></textarea>
-  <input type="submit" value="Send" onclick="send()">
+    <label>Name</label>
+    <input type="text" name="navn">
+    <label>Email</label>
+    <input type="email" name="email">
+    <label>Message</label>
+    <textarea name="msg" cols="50" rows="10"></textarea>
+    <input type="submit" value="Send" onclick="send()">
 </form>
 </body>
+<footer>
+    <p>Laget av: Torkel Herskedal Ivarsøy og Asbjørn Håland Hestnes</p>
+    <a href="#navbar" alt="tilbake til meny"> <img src="./bilder/png-transparent-computer-icons-encapsulated-postscript-back-icon-angle-text-круглые-кнопки-thumbnail.png" class="icons"> </a>
+</footer>
 </html>
