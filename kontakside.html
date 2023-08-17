@@ -5,27 +5,34 @@
     <title>Kontakt Oss</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        const PUBLIC_KEY = "j3uXgMkKF9LsBZ9uz";
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init(PUBLIC_KEY);
-        })();
-    </script>
-    <script type="text/javascript">
-        const SERVICE_ID = "service_w3gau7c";
-        const TEMPLATE_ID = "template_s4ygcrd";
+
+        //torkel
+        const SERVICE_ID_T = "service_w3gau7c";
+        const TEMPLATE_ID_T = "template_s4ygcrd";
+        const PUBLIC_KEY_T = "j3uXgMkKF9LsBZ9uz";
+        //asbjørn
+        const SERVICE_ID_A = "service_f2zw9ku";
+        const TEMPLATE_ID_A = "template_je31kbi";
+        const PUBLIC_KEY_A = "fAdd_OAJbgv8v-L0T";
 
         function send() {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
 
-                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, document.getElementById('contact-form'), PUBLIC_KEY)
+                emailjs.sendForm(SERVICE_ID_T, TEMPLATE_ID_T, document.getElementById('contact-form'), PUBLIC_KEY_T)
+                    .then(function () {
+                    }, function (error) {
+                        console.log(error)
+                    });
+
+                emailjs.sendForm(SERVICE_ID_A, TEMPLATE_ID_A, document.getElementById('contact-form'), PUBLIC_KEY_A)
                     .then(function () {
                         alert("Melding er sendt.")
                     }, function (error) {
                         console.log(error)
                         alert("Det skjedde en feil, prøv igjen seinere.")
                     });
+
             });
         }
     </script>
@@ -53,6 +60,8 @@
         <input type="text" name="navn">
         <label>Email</label>
         <input type="email" name="email">
+        <label>Tema</label>
+        <input type="text" name="tema">
         <label>Melding</label>
         <textarea name="msg" cols="50" rows="10"></textarea>
         <input type="submit" value="Send Melding" onclick="send()">
