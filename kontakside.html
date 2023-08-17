@@ -22,14 +22,14 @@
                 emailjs.sendForm(SERVICE_ID_T, TEMPLATE_ID_T, document.getElementById('contact-form'), PUBLIC_KEY_T)
                     .then(function () {
                     }, function (error) {
-                        console.log(error)
+                        console.log("Torkel: " + error)
                     });
 
                 emailjs.sendForm(SERVICE_ID_A, TEMPLATE_ID_A, document.getElementById('contact-form'), PUBLIC_KEY_A)
                     .then(function () {
                         alert("Melding er sendt.")
                     }, function (error) {
-                        console.log(error)
+                        console.log("Asbjørn: " + error)
                         alert("Det skjedde en feil, prøv igjen seinere.")
                     });
 

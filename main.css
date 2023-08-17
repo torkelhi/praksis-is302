@@ -4,6 +4,14 @@
 
 .logo {
     margin: 2% 2% 2%;
+    display: flex;
+}
+.logo h2 {
+    margin-left:2rem;
+    line-height: 1.5;
+    font-family: Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .icons {
@@ -12,10 +20,11 @@
     margin-right: 0.5rem;
 }
 
-h2 h3 {
-    font-family: Arial,sans-serif;
-    font-style: normal;
+article > section > h2 h3 {
     line-height: 1.5;
+    font-family: Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 p {
